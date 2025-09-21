@@ -1,0 +1,28 @@
+{
+    "id": "7AEBA126",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1758425551879.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "id": "febe71f6b0734364bebf3604bff94c6c",
+        "name": "MST",
+        "title": "MST",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 7809635517437470070,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1758425551879,
+    "read_only": false,
+    "read_only_alternatives": []
+}
