@@ -62,6 +62,7 @@ head (M[,1:6])
 
 g<- graph.adjacency(M, mode="undirected", weighted="true")
 MST <- minimum.spanning.tree(g)
+MST <-mst(g)
 plot (MST, vertex.shape="none", vertex.label.cex=7)
 
 #grafica nueva con matriz negativa, ver el espacio-producto, tecnológico 

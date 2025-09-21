@@ -37,7 +37,7 @@ Alumno: Luis Armando González Arellano
 # construimos una visualización utilizando un algoritmo de diseño dirigido por la fuerza. 
 
 
-M <- matrix(runif(200*200, min=0, max=0), ncol=200)
+M <- matrix(runif(200*200, min=0, max=200), ncol=200)
 diag (M) <-0
 head (M [,1:6])
 dim (M)
@@ -48,31 +48,36 @@ dim (M)
 
 library (igraph)
 
-
+g<- graph.adjacency(M, mode="undirected", weighted="true")
+plot(g)
 
 #grafica la matriz
 
 
-
+M<- -M
+head (M[,1:6])
 
 #Transforma la matriz en en NEGATIVA y para identificar los máximos
 
 
-
+g<- graph.adjacency(M, mode="undirected", weighted="true")
+MST <- minimum.spanning.tree(g)
+plot (MST, vertex.shape="none", vertex.label.cex=7)
 
 #grafica nueva con matriz negativa, ver el espacio-producto, tecnológico 
 
 
 
+A<- get.adjacency(MST, sparse= F)
 # matriz de adyacencias (nuevo relacionamiento)
 # ver las aristas que hay entre los nodos
-
+head(A)
 
 
 #VER LAS ARISTAS(PESOS)
 
-
+write.graph(MST,file= "g.gml", format="gml")
 #nodos n-1
 
-
+write.csv(A,file="adyacentes.csv")
 #exportar resultados para cytoscape o gephi
